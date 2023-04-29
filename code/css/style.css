@@ -29,6 +29,10 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.header__img {
+  height: 7rem;
+  aspect-ratio: 1/1;
+}
 .header__button {
   background-color: #462F79;
   border: 0.1rem solid #eee;
@@ -49,13 +53,7 @@ body {
   color: #462F79;
   cursor: pointer;
 }
-.header__buttonWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-.header__socialMediaWrapper {
+.header__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;

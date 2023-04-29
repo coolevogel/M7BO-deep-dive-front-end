@@ -9,6 +9,11 @@
     align-items: center;
     justify-content: space-between;
 
+    &__img{
+        height: 7rem;
+        aspect-ratio: 1/1;
+    }
+
     &__button{
         background-color: colors.$dark-purple;
         border: 0.1rem solid colors.$white;
@@ -29,16 +34,9 @@
             color: colors.$dark-purple;
             cursor: pointer;
         }
-
-        &Wrapper{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-        }
     }
 
-    &__socialMediaWrapper{
+    &__wrapper{
         display: flex;
         align-items: center;
         justify-content: center;
