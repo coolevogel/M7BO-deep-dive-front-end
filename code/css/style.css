@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  font-family: sans-serif;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
@@ -24,7 +23,55 @@ body {
 .header {
   height: 10rem;
   width: 100%;
-  background-color: rgb(70, 47, 120);
+  padding: 3rem;
+  background-color: #462F79;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__button {
+  background-color: #462F79;
+  border: 0.1rem solid #eee;
+  color: #eee;
+  padding: 1rem;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 200%;
+  transition-duration: 0.2s;
+  font-family: "Playfair Display", serif;
+}
+.header__button:hover {
+  background-color: #F4C05D;
+  border: 0.1rem solid #462F79;
+  color: #462F79;
+  cursor: pointer;
+}
+.header__buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.header__socialMediaWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: auto;
+  height: 10rem;
+}
+.header__socialMedia {
+  font-size: 500%;
+  color: #eee;
+  transition-duration: 0.2s;
+}
+.header__socialMedia:hover {
+  color: #F4C05D;
+  cursor: pointer;
+  scale: 1.1;
 }
 
 /*# sourceMappingURL=style.css.map */
