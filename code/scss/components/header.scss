@@ -1,0 +1,7 @@
+@use "../abstracts/colors";
+
+.header{
+    height: 10rem;
+    width: 100%;
+    background-color: colors.$purple;
+}
