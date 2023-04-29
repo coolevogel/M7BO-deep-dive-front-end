@@ -1,0 +1,7 @@
+@use "../abstracts/colors";
+
+.midSection{
+    height: 100%;
+    width: 100rem;
+    background-color: colors.$dark-purple;
+}
