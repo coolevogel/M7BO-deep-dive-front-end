@@ -95,6 +95,80 @@ body {
   height: 100%;
   width: 100rem;
   background-color: #462F79;
+  padding: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.question__h2 {
+  font-size: 300%;
+  color: #eee;
+}
+.question__p {
+  font-size: 300%;
+  color: #eee;
+}
+
+.draggable-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li {
+  display: flex;
+  border: 0.1rem solid rgb(158, 158, 158);
+}
+li.over .draggable {
+  transition-duration: 0.3s;
+  background-color: grey;
+}
+li .number {
+  background-color: #462F78;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  width: 6rem;
+}
+li .person-name {
+  margin: 0 2rem 0 0;
+}
+li.right .draggable {
+  color: black;
+  background-color: #F4C05D;
+}
+li.wrong .draggable {
+  color: red;
+  background-color: white;
+}
+li .draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-start: 1.5rem;
+  padding-right: 2rem;
+  flex: 1;
+}
+
+.check-btn {
+  padding: 1rem;
+  background-color: white;
+  font-size: 200%;
+  border: 0.1rem solid rgb(158, 158, 158);
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.check-btn:hover {
+  transform: scale(1.1);
+  background-color: grey;
 }
 
 /*# sourceMappingURL=style.css.map */

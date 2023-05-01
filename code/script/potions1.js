@@ -1,3 +1,5 @@
+
+
 class Header {
 
     // <header class="header">
@@ -125,6 +127,58 @@ class Main {
 
 }
 
+class Potions1 {
+    placeToRenderQuestion;
+    h2Element;
+    pElement;
+    listElement;
+    buttonElement;
+
+    constructor(placeToRenderQuestion){
+        this.placeToRenderQuestion = placeToRenderQuestion;
+
+        // <h2>10 richest people</h2>
+        // <p>drag and drop the items into their corresponding spots</p>
+        // <ul class="draggable-list" id="draggable-list"></ul>
+        // <button class="check-btn" id="check">
+        //     check order
+        // </button>
+
+        this.h2Element = document.createElement("h2");
+        this.h2Element.classList = "question__h2";
+
+        this.pElement = document.createElement("p");
+        this.pElement.classList = "question__p";
+
+        this.listElement = document.createElement("ul");
+        this.listElement.classList = "draggable-list";
+        this.listElement.id = "draggable-list";
+
+        this.buttonElement = document.createElement("button");
+        this.buttonElement.classList.add("check-btn");
+        this.buttonElement.id = "check";
+
+
+        this.render();
+    }
+
+    render(){
+        this.placeToRenderQuestion.appendChild(this.h2Element);
+        this.placeToRenderQuestion.appendChild(this.pElement);
+        this.placeToRenderQuestion.appendChild(this.listElement);
+        this.placeToRenderQuestion.appendChild(this.buttonElement);
+
+
+        this.renderContent();
+    }
+
+    renderContent(){
+        this.h2Element.innerText = "10 richest people";
+        this.pElement.innerText = "drag and drop the items into their corresponding spots";
+        this.buttonElement.innerText = "check order";
+    }
+}
+
 class App {
     header;
     main;
@@ -132,6 +186,7 @@ class App {
     constructor() {
         this.header = new Header("body");
         this.main = new Main("body");
+        this.potions1 = new Potions1(this.main.midSectionElement);
     }
 
 }
