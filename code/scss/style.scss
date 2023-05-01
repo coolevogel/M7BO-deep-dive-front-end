@@ -1,7 +1,11 @@
-@use "./reset.scss";
 @use "./base.scss";
 
-//components
-@use "./components/header.scss";
+//  Abstracts
+@use "./abstracts/colors";
+@use "./abstracts/mediaqueries";
+@use "./abstracts/reset";
+@use "./abstracts/vars";
 
-@use "./components/midsection.scss"
+//  Components
+@use "./components/header/header.scss";
+@use "./components/midsection/midsection.scss";
