@@ -1,9 +1,9 @@
 @use "../abstracts/colors";
 
 .midSection{
-    height: 100%;
+    height: auto;
     width: 100rem;
-    background-color: colors.$dark-purple;
+    background-color: colors.$light-purple;
     padding: 10rem;
     display: flex;
     align-items: center;

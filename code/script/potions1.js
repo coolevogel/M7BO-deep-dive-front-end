@@ -119,7 +119,7 @@ class Main {
         this.render();
     }
 
-    render(){
+    render() {
         this.placeToRenderMain.appendChild(this.mainElement);
 
         this.mainElement.appendChild(this.midSectionElement);
@@ -128,13 +128,151 @@ class Main {
 }
 
 class Potions1 {
+
+    // const draggable_list = document.getElementById('draggable-list');
+    // const check = document.getElementById('check');
+
+    // const richestPeople = [
+    //   'Jeff Bezos',
+    //   'Bill Gates',
+    //   'Warren Buffett',
+    //   'Bernard Arnault',
+    //   'Carlos Slim Helu',
+    //   'Amancio Ortega',
+    //   'Larry Ellison',
+    //   'Mark Zuckerberg',
+    //   'Michael Bloomberg',
+    //   'Larry Page'
+    // ];
+
+    // // Store listitems
+    // const listItems = [];
+
+    // let dragStartIndex;
+
+    // createList();
+
+    // // Insert list items into DOM
+    // function createList() {
+    //   [...richestPeople]
+    //     .map(a => ({ value: a, sort: Math.random() }))
+    //     .sort((a, b) => a.sort - b.sort)
+    //     .map(a => a.value)
+    //     .forEach((person, index) => {
+    //       const listItem = document.createElement('li');
+
+    //       listItem.setAttribute('data-index', index);
+
+    //       listItem.innerHTML = `
+    //         <span class="number">${index + 1}</span>
+    //         <div class="draggable" draggable="true">
+    //           <p class="person-name">${person}</p>
+    //           <i class="fas fa-grip-lines"></i>
+    //         </div>
+    //       `;
+
+    //       listItems.push(listItem);
+
+    //       draggable_list.appendChild(listItem);
+    //     });
+
+    //   addEventListeners();
+    // }
+
+    // function dragStart() {
+    //   // console.log('Event: ', 'dragstart');
+    //   dragStartIndex = +this.closest('li').getAttribute('data-index');
+    // }
+
+    // function dragEnter() {
+    //   // console.log('Event: ', 'dragenter');
+    //   this.classList.add('over');
+    // }
+
+    // function dragLeave() {
+    //   // console.log('Event: ', 'dragleave');
+    //   this.classList.remove('over');
+    // }
+
+    // function dragOver(e) {
+    //   // console.log('Event: ', 'dragover');
+    //   e.preventDefault();
+    // }
+
+    // function dragDrop() {
+    //   // console.log('Event: ', 'drop');
+    //   const dragEndIndex = +this.getAttribute('data-index');
+    //   swapItems(dragStartIndex, dragEndIndex);
+
+    //   this.classList.remove('over');
+    // }
+
+    // // Swap list items that are drag and drop
+    // function swapItems(fromIndex, toIndex) {
+    //   const itemOne = listItems[fromIndex].querySelector('.draggable');
+    //   const itemTwo = listItems[toIndex].querySelector('.draggable');
+
+    //   listItems[fromIndex].appendChild(itemTwo);
+    //   listItems[toIndex].appendChild(itemOne);
+    // }
+
+    // // Check the order of list items
+    // function checkOrder() {
+    //   listItems.forEach((listItem, index) => {
+    //     const personName = listItem.querySelector('.draggable').innerText.trim();
+
+    //     if (personName !== richestPeople[index]) {
+    //       listItem.classList.add('wrong');
+    //     } else {
+    //       listItem.classList.remove('wrong');
+    //       listItem.classList.add('right');
+    //     }
+    //   });
+    // }
+
+    // function addEventListeners() {
+    //   const draggables = document.querySelectorAll('.draggable');
+    //   const dragListItems = document.querySelectorAll('.draggable-list li');
+
+    //   draggables.forEach(draggable => {
+    //     draggable.addEventListener('dragstart', dragStart);
+    //   });
+
+    //   dragListItems.forEach(item => {
+    //     item.addEventListener('dragover', dragOver);
+    //     item.addEventListener('drop', dragDrop);
+    //     item.addEventListener('dragenter', dragEnter);
+    //     item.addEventListener('dragleave', dragLeave);
+    //   });
+    // }
+
+    // check.addEventListener('click', checkOrder);
+
     placeToRenderQuestion;
     h2Element;
     pElement;
     listElement;
+    listItem;
     buttonElement;
+    draggable_list;
 
-    constructor(placeToRenderQuestion){
+    steps = [
+        'Add Ashwinder egg to a cauldron, then add horseradish and heat.',
+        'Juice a squill bulb, add to the cauldron and stir vigorously.',
+        'Chop up anemone-like growth on the back of Murtlap, add to mixture and heat.',
+        'Add a dash of tincture of thyme and stir slowly.',
+        'Grind up Occamy eggshell and add to mixture.',
+        'Stir slowly then heat the cauldron.',
+        'Add a sprinkle of powdered common rue.',
+        'Stir vigorously then heat the cauldron one last time.',
+        'Wave wand over potion in a figure of eight and say incantation ,Felixempra!'
+    ];
+
+    listItems = [];
+
+    dragStartIndex;
+
+    constructor(placeToRenderQuestion) {
         this.placeToRenderQuestion = placeToRenderQuestion;
 
         // <h2>10 richest people</h2>
@@ -144,11 +282,15 @@ class Potions1 {
         //     check order
         // </button>
 
+        // text
+
         this.h2Element = document.createElement("h2");
         this.h2Element.classList = "question__h2";
 
         this.pElement = document.createElement("p");
         this.pElement.classList = "question__p";
+
+        // draggable-list
 
         this.listElement = document.createElement("ul");
         this.listElement.classList = "draggable-list";
@@ -157,12 +299,107 @@ class Potions1 {
         this.buttonElement = document.createElement("button");
         this.buttonElement.classList.add("check-btn");
         this.buttonElement.id = "check";
+        this.buttonElement.addEventListener('click', this.checkOrder);
 
 
         this.render();
+        this.createList();
     }
 
-    render(){
+    createList() {
+        [...this.steps]
+            .map(a => ({ value: a, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(a => a.value)
+            .forEach((step, index) => {
+                this.listItem = document.createElement('li');
+
+                this.listItem.setAttribute('data-index', index);
+
+                this.listItem.innerHTML = `
+                <span class="number">${index + 1}</span>
+                <div class="draggable" draggable="true">
+                  <p class="person-name">${step}</p>
+                  <i class="fas fa-grip-lines"></i>
+                </div>
+              `;
+
+                this.listItems.push(this.listItem);
+
+                this.listElement.appendChild(this.listItem);
+            });
+
+        this.addEventListeners();
+    }
+
+    dragStart() {
+        // console.log('Event: ', 'dragstart');
+        this.dragStartIndex = +this.closest('li').getAttribute('data-index');
+    }
+
+    dragEnter() {
+        // console.log('Event: ', 'dragenter');
+        this.classList.add('over');
+    }
+
+    dragLeave() {
+        // console.log('Event: ', 'dragleave');
+        this.classList.remove('over');
+    }
+
+    dragOver(e) {
+        // console.log('Event: ', 'dragover');
+        e.preventDefault();
+    }
+
+    dragDrop() {
+        // console.log('Event: ', 'drop');
+        this.dragEndIndex = +this.getAttribute('data-index');
+        swapItems(this.dragStartIndex, this.dragEndIndex);
+
+        this.classList.remove('over');
+    }
+
+    // // Swap list items that are drag and drop
+    swapItems(fromIndex, toIndex) {
+        this.itemOne = listItems[fromIndex].querySelector('.draggable');
+        this.itemTwo = listItems[toIndex].querySelector('.draggable');
+
+        listItems[fromIndex].appendChild(this.itemTwo);
+        listItems[toIndex].appendChild(itemOne);
+    }
+
+    // Check the order of list items
+    checkOrder() {
+        listItems.forEach((listItem, index) => {
+            const personName = listItem.querySelector('.draggable').innerText.trim();
+
+            if (personName !== richestPeople[index]) {
+                this.listItem.classList.add('wrong');
+            } else {
+                this.listItem.classList.remove('wrong');
+                this.listItem.classList.add('right');
+            }
+        });
+    }
+
+    addEventListeners() {
+        this.draggables = document.querySelectorAll('.draggable');
+        this.dragListItems = document.querySelectorAll('.draggable-list li');
+
+        this.draggables.forEach(draggable => {
+            this.draggable.addEventListener('dragstart', this.dragStart);
+        });
+
+        this.dragListItems.forEach(item => {
+            item.addEventListener('dragover', this.dragOver);
+            item.addEventListener('drop', this.dragDrop);
+            item.addEventListener('dragenter', this.dragEnter);
+            item.addEventListener('dragleave', this.dragLeave);
+        });
+    }
+
+    render() {
         this.placeToRenderQuestion.appendChild(this.h2Element);
         this.placeToRenderQuestion.appendChild(this.pElement);
         this.placeToRenderQuestion.appendChild(this.listElement);
@@ -172,8 +409,8 @@ class Potions1 {
         this.renderContent();
     }
 
-    renderContent(){
-        this.h2Element.innerText = "10 richest people";
+    renderContent() {
+        this.h2Element.innerText = "how do you make Felix Felicis?";
         this.pElement.innerText = "drag and drop the items into their corresponding spots";
         this.buttonElement.innerText = "check order";
     }

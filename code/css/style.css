@@ -26,17 +26,6 @@ body {
   align-items: flex-start;
   justify-content: center;
 }
-.main:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.3;
-  z-index: 1;
-}
 
 .header {
   height: 10rem;
@@ -92,9 +81,9 @@ body {
 }
 
 .midSection {
-  height: 100%;
+  height: auto;
   width: 100rem;
-  background-color: #462F79;
+  background-color: #604D8A;
   padding: 10rem;
   display: flex;
   align-items: center;
@@ -137,18 +126,16 @@ li .number {
   height: 6rem;
   width: 6rem;
 }
-li .person-name {
-  margin: 0 2rem 0 0;
-}
 li.right .draggable {
   color: black;
-  background-color: #F4C05D;
+  background-color: red;
 }
 li.wrong .draggable {
   color: red;
   background-color: white;
 }
-li .draggable {
+
+.draggable {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -156,6 +143,8 @@ li .draggable {
   padding-inline-start: 1.5rem;
   padding-right: 2rem;
   flex: 1;
+  font-size: 200%;
+  background-color: #eee;
 }
 
 .check-btn {
