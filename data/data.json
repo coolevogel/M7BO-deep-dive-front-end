@@ -34,11 +34,32 @@
       "answer": ["Schande plant", "Levende steen", "Strangler Fig", "Venus vliegenval"]
     },
     {
+      "type": "sort",
+      "image":"./images/Hogwarts.webp",
+      "question": "how do you make Felix Felicis?",
+      "options": ["Juice a squill bulb, add to the cauldron and stir vigorously.", "Chop up anemone-like growth on the back of Murtlap, add to mixture and heat.", "Add Ashwinder egg to a cauldron, then add horseradish and heat.", "Add a dash of tincture of thyme and stir slowly.", "Stir slowly then heat the cauldron.", "Add a sprinkle of powdered common rue.", "Grind up Occamy eggshell and add to mixture.", "Wave wand over potion in a figure of eight and say incantation 'Felixempra!'", "Stir vigorously then heat the cauldron one last time."],
+      "answer": ["Add Ashwinder egg to a cauldron, then add horseradish and heat.", "Juice a squill bulb, add to the cauldron and stir vigorously.", "Chop up anemone-like growth on the back of Murtlap, add to mixture and heat.", "Add a dash of tincture of thyme and stir slowly.", "Grind up Occamy eggshell and add to mixture.", "Stir slowly then heat the cauldron.", "Add a sprinkle of powdered common rue.", "Stir vigorously then heat the cauldron one last time.", "Wave wand over potion in a figure of eight and say incantation 'Felixempra!'"]
+    },
+    {
       "type": "multiple_choice",
       "image":"./images/Hogwarts.webp",
       "question": "Welke van de onderstaande planten heeft de geslacht ‘Aconitum’?",
       "options": ["Mandragora", "Wolfsbane", "Alsem & Bijvoet", "Asphodel"],
       "answer": "Wolfsbane"
+    },
+    {
+      "type": "multiple_choice",
+      "image":"./images/Hogwarts.webp",
+      "question": "what does polyjuice potion taste like according to harry potter?",
+      "options": ["overcooked cabbage", "tomato soup", "goblin piss"],
+      "answer": "overcooked cabbage"
+    },
+    {
+      "type": "multiple_choice",
+      "image":"./images/Hogwarts.webp",
+      "question": "what color does polyjuice potion take when it is done brewing?",
+      "options": ["dark brown", "yellow", "white", "all the colors of the rainbow"],
+      "answer": "dark brown"
     },
     {
       "type": "multiple_choice",
