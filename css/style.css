@@ -19,13 +19,12 @@ body {
 }
 .main .quiz {
   width: 70%;
-  background-color: green;
+  background-color: #604D8A;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  border-radius: 2rem;
 }
 .main .quiz__Button {
   max-width: 25rem;
@@ -238,7 +237,7 @@ body {
 }
 .header {
   height: 10rem;
-  width: 100%;
+  width: 100vw;
   padding: 3rem;
   background-color: #462F79;
   display: flex;
@@ -260,7 +259,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 200%;
+  font-size: 100%;
   transition-duration: 0.2s;
   font-family: "Playfair Display", serif;
 }
@@ -279,9 +278,10 @@ body {
   height: 10rem;
 }
 .header__socialMedia {
-  font-size: 500%;
+  font-size: 200%;
   color: #eee;
   transition-duration: 0.2s;
+  background-color: red;
 }
 .header__socialMedia:hover {
   color: #F4C05D;

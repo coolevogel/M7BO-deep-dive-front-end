@@ -2,7 +2,7 @@
 
 .header{
     height: 10rem;
-    width: 100%;
+    width: 100vw;
     padding: 3rem;
     background-color: variables.$dark-purple;
     display: flex;
@@ -25,7 +25,7 @@
         align-items: center;
         justify-content: center;
         font-weight: 600;
-        font-size: 200%;
+        font-size: 100%;
         transition-duration: 0.2s;
         font-family: 'Playfair Display', serif;
 
@@ -47,9 +47,10 @@
     }
 
     &__socialMedia{
-        font-size: 500%;
+        font-size: 200%;
         color: variables.$white;
         transition-duration: 0.2s;
+        background-color: red;
 
         &:hover{
             color: variables.$yellow;
