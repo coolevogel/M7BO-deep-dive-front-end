@@ -1,0 +1,36 @@
+.quiz{
+  &__multiplechoiceQuestion{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 4rem;
+  }
+
+  &__multitImage{
+      width: 100%;
+      height: 20rem;
+  }
+
+  &__multiplechoiceasnwer{
+    &:hover{
+      cursor: pointer;
+    }
+
+    &__multiplechoiceLabel{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+  }
+
+  &__radiogroup{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: left;
+  }
+
+
+}

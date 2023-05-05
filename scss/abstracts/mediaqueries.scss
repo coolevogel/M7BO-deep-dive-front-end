@@ -1,0 +1,129 @@
+@media screen and (max-width:50rem){
+    .main{
+
+        .quiz{
+            width: 100%;
+            
+
+            
+          
+            &__sortablelistLabel{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                flex-wrap: wrap;
+                
+            }
+          
+            &__sortablelistImage{
+                max-width: 100%;
+                height: 20rem;
+            }
+          
+            &__buttoncontainer{
+                display: flex;
+                gap: 6rem;
+            }
+          
+            &__sortableUL{
+              list-style: none ;
+              display: flex;
+              flex-direction: column;
+              gap: 2rem;
+              
+          
+            }
+          
+            &__sortableListItem{
+              background-color: white;
+              padding: 1rem;
+              border-radius: .5rem;
+              cursor: pointer;
+          
+            }
+
+            &__multiplechoiceQuestion{
+                display: flex;
+                flex-direction: column;
+
+                gap: 4rem;
+            }
+          
+            &__multitImage{
+                max-width: 100%;
+                height: 20rem;
+            }
+          
+            &__multiplechoiceasnwer{
+              
+              
+              &:hover{
+                cursor: pointer;
+              }
+              
+            }
+          
+            &__radiogroup{
+              display: flex;
+              flex-direction: column;
+              gap: 2rem;
+              justify-content: center;
+              align-items: left;
+            }
+
+            &__inputQuestion{
+                display: flex;
+                flex-direction: column;
+                padding: 4rem;
+                width: 100%;
+                gap: 4rem;
+            }
+        
+            &__inputLabel{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+        
+            &__input{
+                display: flex;
+                padding: 1.5rem;
+                border-radius: .5rem;
+                border: .1rem solid #000;
+        
+            }
+        
+            &__inputImage{
+                width: 100%;
+                height: 20rem;
+            }
+
+            &__Button{
+                font-size: 1rem;
+                font-weight: 600;
+                max-width: 100%;
+                height: 4rem;
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: blueviolet;
+                border: none;
+                border-radius: .2rem;
+                
+                color: #fff;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.03);
+                    background: fade-in($color: #000000, $amount: 0);
+                }
+            }
+    
+            &__buttoncontainer{
+                display: flex;
+                gap: 3rem;
+            }
+
+        }
+    }
+}

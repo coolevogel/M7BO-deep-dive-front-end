@@ -1,0 +1,33 @@
+.quiz{
+    &__inputQuestion{
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+        width: 70%;
+        gap: 4rem;
+    }
+
+    &__inputLabel{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__input{
+        display: flex;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        border: .1rem solid #000;
+
+    }
+
+    &__inputImage{
+        width: 100%;
+        height: 20rem;
+    }
+
+    
+
+    
+
+}

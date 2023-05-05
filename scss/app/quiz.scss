@@ -1,0 +1,43 @@
+@use "../abstracts/variables.scss";
+.main{
+    display: flex ;
+    justify-content: center;
+    align-items: center ;
+   
+    .quiz{
+        width: 70%;
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        border-radius: 2rem;
+
+        &__Button{
+            max-width: 25rem;
+            height: 4rem;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: blueviolet;
+            border: none;
+            border-radius: .2rem;
+            color: #fff;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.03);
+                background: fade-in($color: #000000, $amount: 0);
+            }
+        }
+
+        &__buttoncontainer{
+            display: flex;
+            gap: 6rem;
+        }
+
+    }
+}
+
+

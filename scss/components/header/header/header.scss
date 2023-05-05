@@ -1,0 +1,60 @@
+@use "../../../abstracts/variables.scss";
+
+.header{
+    height: 10rem;
+    width: 100%;
+    padding: 3rem;
+    background-color: variables.$dark-purple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+
+    &__img{
+        height: 7rem;
+        aspect-ratio: 1/1;
+    }
+
+    &__button{
+        background-color: variables.$dark-purple;
+        border: 0.1rem solid variables.$white;
+        color: variables.$white;
+        padding: 1rem;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 200%;
+        transition-duration: 0.2s;
+        font-family: 'Playfair Display', serif;
+
+        &:hover{
+            background-color: variables.$yellow;
+            border: 0.1rem solid variables.$dark-purple;
+            color: variables.$dark-purple;
+            cursor: pointer;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        width: auto;
+        height: 10rem;
+    }
+
+    &__socialMedia{
+        font-size: 500%;
+        color: variables.$white;
+        transition-duration: 0.2s;
+
+        &:hover{
+            color: variables.$yellow;
+            cursor: pointer;
+            scale: 1.1;
+        }
+    }
+}
