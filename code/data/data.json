@@ -1,0 +1,51 @@
+{
+    "questions": [
+      {
+        "type": "input",
+        "image":"./images/Hogwarts.webp",
+        "question": "Welke magische plant is bekend om zijn geneeskrachtige eigenschappen en wordt vaak gebruikt in toverdranken om te genezen?",
+        "answer": "Bezoarsteen"
+      },
+      {
+        "type": "input",
+        "image":"./images/Hogwarts.webp",
+        "question": "Welke spreuk zou je gebruiken om jezelf te genezen na het drinken van een vergiftigde drank?",
+        "answer": "Antidotum Veritaserum"
+      },
+      {
+        "type": "sort",
+        "image":"./images/Hogwarts.webp",
+        "question": "Zet de spreuken hieronder in de juiste volgorde van lichtste naar krachtigste spreuk.",
+        "options": ["Expelliarmus", "Avada Kedavra", "Stupefy", "Sectumsempra"],
+        "answer": ["Stupefy", "Expelliarmus", "Sectumsempra", "Avada Kedavra"]
+      },
+      {
+        "type": "sort",
+        "image":"./images/Hogwarts.webp",
+        "question": "Welke planten zijn de beste magische planten die magie uitstralen? Zet ze op de juiste volgorde.",
+        "options": ["Levende steen", "Venus vliegenval", "Schande plant", "Strangler Fig"],
+        "answer": ["Schande plant", "Levende steen", "Strangler Fig", "Venus vliegenval"]
+      },
+      {
+        "type": "sort",
+        "image":"./images/Hogwarts.webp",
+        "question": "Welke planten zijn de beste magische planten die magie uitstralen? Zet ze op de juiste volgorde.",
+        "options": ["Levende steen", "Venus vliegenval", "Schande plant", "Strangler Fig"],
+        "answer": ["Schande plant", "Levende steen", "Strangler Fig", "Venus vliegenval"]
+      },
+      {
+        "type": "multiple_choice",
+        "image":"./images/Hogwarts.webp",
+        "question": "Welke van de onderstaande planten heeft de geslacht ‘Aconitum’?",
+        "options": ["Mandragora", "Wolfsbane", "Alsem & Bijvoet", "Asphodel"],
+        "answer": "Wolfsbane"
+      },
+      {
+        "type": "multiple_choice",
+        "image":"./images/Hogwarts.webp",
+        "question": "Welke spreuk is de meest bekende spreuken aller tijden?",
+        "options": ["Avada Kedavra", "Expelliarmus", "Expecto Patronum", "Alohomora"],
+        "answer": "Expecto Patronum"
+      }
+    ]
+  }
