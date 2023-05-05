@@ -27,13 +27,6 @@
         "answer": ["Schande plant", "Levende steen", "Strangler Fig", "Venus vliegenval"]
       },
       {
-        "type": "sort",
-        "image":"./images/Hogwarts.webp",
-        "question": "Welke planten zijn de beste magische planten die magie uitstralen? Zet ze op de juiste volgorde.",
-        "options": ["Levende steen", "Venus vliegenval", "Schande plant", "Strangler Fig"],
-        "answer": ["Schande plant", "Levende steen", "Strangler Fig", "Venus vliegenval"]
-      },
-      {
         "type": "multiple_choice",
         "image":"./images/Hogwarts.webp",
         "question": "Welke van de onderstaande planten heeft de geslacht ‘Aconitum’?",
