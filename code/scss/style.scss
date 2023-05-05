@@ -1,11 +1,16 @@
 @use "./base.scss";
 
-//  Abstracts
+// components
+@use "./components/header/header.scss";
+@use "./components/quiz/quiz.scss";
+@use "./components/buttons/buttons.scss";
+@use "./components/input/input.scss";
+@use "./components/multiplechoice/multiplechoice.scss";
+@use "./components/sortable/sortable.scss";
+
+// abstracts
 @use "./abstracts/colors";
-@use "./abstracts/mediaqueries";
-@use "./abstracts/reset";
 @use "./abstracts/vars";
 
-//  Components
-@use "./components/header/header.scss";
-@use "./components/midsection/midsection.scss";
+// mediaqueries
+@use "./abstracts/mediaqueries";
